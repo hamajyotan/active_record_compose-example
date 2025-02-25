@@ -1,6 +1,28 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  codespaces_port_forwarding_domain = ENV["GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN"]
+  codespace_name = ENV["CODESPACE_NAME"]
+
+  if codespaces_port_forwarding_domain.present? && codespace_name.present?
+    url = URI.parse("https://#{codespace_name}-3000.#{codespaces_port_forwarding_domain}")
+
+    default_url_options = {
+      host: url.host,
+      port: url.port,
+      protocol: url.scheme
+    }
+
+    config.hosts << url.host
+
+    warn "Disabling the CSRF protection Origin header check in GitHub Codespaces"
+    config.action_controller.forgery_protection_origin_check = false
+  else
+    default_url_options = { host: "localhost", port: 3000 }
+  end
+
+  config.action_controller.default_url_options = default_url_options
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Make code changes take effect immediately without server restart.
@@ -35,7 +57,7 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   # Set localhost to be used by links generated in mailer templates.
-  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
+  config.action_mailer.default_url_options = default_url_options
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
