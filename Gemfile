@@ -45,8 +45,10 @@ group :development do
   gem "web-console"
 
   gem "rbs", require: false
+  gem "rbs_rails", require: false
   gem "repl_type_completor", require: false
   gem "ruby-lsp", require: false
+  gem "steep", require: false
 end
 
 group :test do
