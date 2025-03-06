@@ -228,6 +228,9 @@ GEM
     regexp_parser (2.10.0)
     reline (0.6.0)
       io-console (~> 0.5)
+    repl_type_completor (0.1.10)
+      prism (~> 1.0)
+      rbs (>= 2.7.0, < 4.0.0)
     rexml (3.4.1)
     rubocop (1.72.2)
       json (~> 2.3)
@@ -354,6 +357,8 @@ DEPENDENCIES
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.1)
+  rbs
+  repl_type_completor
   rubocop-rails-omakase
   ruby-lsp
   selenium-webdriver
