@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  if Rails.configuration.action_mailer.delivery_method == :letter_opener_web
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 end
