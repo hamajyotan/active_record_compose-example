@@ -1,0 +1,41 @@
+---
+ja:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'バリデーションに失敗しました: %{errors}'
+        restrict_dependent_destroy:
+          has_one: "%{record}が存在しているので削除できません"
+          has_many: "%{record}が存在しているので削除できません"
+  errors:
+    format: "%{message}"
+    messages:
+      accepted: "%{attribute}を受諾してください"
+      blank: "%{attribute}を入力してください"
+      confirmation: "%{attribute}の入力が一致しません"
+      empty: "%{attribute}を入力してください"
+      equal_to: "%{attribute}は%{count}にしてください"
+      even: "%{attribute}は偶数にしてください"
+      exclusion: "%{attribute}は予約されています"
+      greater_than: "%{attribute}は%{count}より大きい値にしてください"
+      greater_than_or_equal_to: "%{attribute}は%{count}以上の値にしてください"
+      in: "%{attribute}は%{count}の範囲に含めてください"
+      inclusion: "%{attribute}は一覧にありません"
+      invalid: "%{attribute}は不正な値です"
+      less_than: "%{attribute}は%{count}より小さい値にしてください"
+      less_than_or_equal_to: "%{attribute}は%{count}以下の値にしてください"
+      model_invalid: 'バリデーションに失敗しました: %{errors}'
+      not_a_number: "%{attribute}は数値で入力してください"
+      not_an_integer: "%{attribute}は整数で入力してください"
+      odd: "%{attribute}は奇数にしてください"
+      other_than: "%{attribute}は%{count}以外の値にしてください"
+      password_too_long: "%{attribute}が長すぎます"
+      present: "%{attribute}は入力しないでください"
+      required: "%{attribute}を入力してください"
+      taken: "%{attribute}はすでに存在します"
+      too_long: "%{attribute}は%{count}文字以内で入力してください"
+      too_short: "%{attribute}は%{count}文字以上で入力してください"
+      wrong_length: "%{attribute}は%{count}文字で入力してください"
+    template:
+      body: 次の項目を確認してください
+      header: "%{model}に%{count}個のエラーが発生しました"
