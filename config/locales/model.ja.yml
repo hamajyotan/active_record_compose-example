@@ -1,5 +1,9 @@
 ---
 ja:
+  activemodel:
+    errors:
+      messages:
+        record_invalid: 'バリデーションに失敗しました: %{errors}'
   activerecord:
     errors:
       messages:
