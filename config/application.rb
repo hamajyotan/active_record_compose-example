@@ -40,5 +40,7 @@ module ActiveRecordComposeExample
     config.i18n.available_locales = %i[en ja]
     config.i18n.enforce_available_locales = true
     config.i18n.default_locale = :en
+
+    config.action_view.field_error_proc = proc { |html_tag, _instance| html_tag }
   end
 end
