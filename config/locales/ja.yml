@@ -1,6 +1,10 @@
 ja:
   application_name: "ActiveRecordCompose Example"
 
+  lang:
+    en: "Engligh"
+    ja: "日本語"
+
   application:
     sidebar:
       home: "ホーム"

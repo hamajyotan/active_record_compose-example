@@ -13,6 +13,8 @@ module ApplicationHelper
     end
   end
 
+  def navigation_delimiter = tag.li(class: %w[nav-item disabled]) { tag.hr }
+
   def with_bi_icon(name = nil, key:, &block)
     if block_given?
       safe_join [ bi_icon(key), yield ], " "

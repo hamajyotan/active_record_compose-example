@@ -2,4 +2,8 @@
 
 <ul class="nav nav-pills flex-column">
   <%= navigation_link_item root_path, title: t(".home"), icon: "house", active: sidebar == "home" %>
+
+  <%= navigation_delimiter %>
+  <%= navigation_link_item locale_path(lang: 'en'), title: t("lang.en"), icon: "translate", data: { turbo_method: :patch } %>
+  <%= navigation_link_item locale_path(lang: 'ja'), title: t("lang.ja"), icon: "translate", data: { turbo_method: :patch } %>
 </ul>
