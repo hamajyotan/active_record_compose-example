@@ -1,0 +1,5 @@
+<% sidebar = yield(:sidebar_current) %>
+
+<ul class="nav nav-pills flex-column">
+  <%= navigation_link_item root_path, title: t(".home"), icon: "house", active: sidebar == "home" %>
+</ul>

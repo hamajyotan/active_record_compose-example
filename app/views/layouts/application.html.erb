@@ -25,6 +25,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= render 'header' %>
+      <div class="row">
+        <div class="col-md-9 p-3">
+          <%= render 'flash' %>
+          <%= yield %>
+        </div>
+        <div class="col-md-3 p-3">
+          <%= render 'sidebar' %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
