@@ -6,4 +6,20 @@
   <%= navigation_delimiter %>
   <%= navigation_link_item locale_path(lang: 'en'), title: t("lang.en"), icon: "translate", data: { turbo_method: :patch } %>
   <%= navigation_link_item locale_path(lang: 'ja'), title: t("lang.ja"), icon: "translate", data: { turbo_method: :patch } %>
+
+  <% if Rails.env.development? %>
+    <%= navigation_delimiter %>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+        <%= with_bi_icon "DevTools", key: "tools" %>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <%= link_to letter_opener_web_path, class: %w[dropdown-item], target: "_blank" do %>
+            <%= with_bi_icon "Letter Opener", key: "envelope" %>
+          <% end %>
+        </li>
+      </ul>
+    </li>
+  <% end %>
 </ul>
