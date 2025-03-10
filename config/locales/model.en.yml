@@ -4,6 +4,11 @@ en:
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'
+      models:
+        session:
+          attributes:
+            base:
+              login_failed: Sign in failed
   activerecord:
     errors:
       messages:

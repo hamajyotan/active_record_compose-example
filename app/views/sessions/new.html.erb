@@ -1,0 +1,24 @@
+<% content_for :title, t(".title") %>
+<% content_for :sidebar_current, "login" %>
+
+<%= form_with model: @session, url: session_path do |f| %>
+  <%= f.model_base_error %>
+
+  <div class="mb-3">
+    <%= f.label :email, class: %[form-label] %>
+    <%= f.email_field :email, class: %[form-control], autofocus: true %>
+    <%= f.invalid_feedback :email %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :password, class: %[form-label] %>
+    <%= f.password_field :password, class: %[form-control] %>
+    <%= f.invalid_feedback :password %>
+  </div>
+
+  <%= f.submit class: %[btn btn-primary] %>
+<% end %>
+
+<br>
+
+<%= link_to t("back"), root_path %>

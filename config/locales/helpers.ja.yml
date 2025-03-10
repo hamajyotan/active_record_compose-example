@@ -8,5 +8,7 @@ ja:
       submit: 保存する
       update: 更新する
 
+      session:
+        create: ログイン
       user_registration_request:
         create: サインアップ

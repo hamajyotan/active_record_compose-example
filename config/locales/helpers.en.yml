@@ -8,5 +8,7 @@ en:
       submit: Save %{model}
       update: Update %{model}
 
+      session:
+        create: Login
       user_registration_request:
         create: Sign up

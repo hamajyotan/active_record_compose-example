@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resource :confirmation, only: %i[new create]
     end
   end
+  resource :session, only: %i[new create destroy]
   resource :locale, only: %i[update]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

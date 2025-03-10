@@ -1,6 +1,7 @@
 en:
   application_name: "ActiveRecordCompose Example"
   back: "Back"
+  please_log_in_first: "Please log in first"
 
   lang:
     en: "English"
@@ -9,7 +10,16 @@ en:
   application:
     sidebar:
       home: "Home"
+      sign_out: "Sign-out"
       sign_up: "Sign-up"
+      login: "Login"
+  sessions:
+    new:
+      title: "Login"
+    create:
+      created: "Logged in"
+    destroy:
+      destroyed: "Logged out"
   user_registration_mailer:
     requested:
       subject: "User registration has not yet been completed."

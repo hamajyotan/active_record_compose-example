@@ -1,6 +1,7 @@
 ja:
   application_name: "ActiveRecordCompose Example"
   back: "戻る"
+  please_log_in_first: "先にログインしてください"
 
   lang:
     en: "Engligh"
@@ -9,7 +10,16 @@ ja:
   application:
     sidebar:
       home: "ホーム"
+      sign_out: "ログアウト"
       sign_up: "ユーザ登録"
+      login: "ログイン"
+  sessions:
+    new:
+      title: "ログイン"
+    create:
+      created: "ログインしました"
+    destroy:
+      destroyed: "ログアウトしました"
   user_registration_mailer:
     requested:
       subject: "ユーザ登録はまだ完了していません。"
