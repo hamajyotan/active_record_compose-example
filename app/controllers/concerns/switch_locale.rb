@@ -13,6 +13,6 @@ module SwitchLocale
   end
 
   def extract_locale
-    cookies[:locale].to_s.to_sym.presence_in(I18n.available_locales)
+    current_user&.lang || cookies[:locale].to_s.to_sym.presence_in(I18n.available_locales)
   end
 end

@@ -7,11 +7,10 @@
     <% # after login links %>
   <% else %>
     <%= navigation_link_item new_user_registration_request_path, title: t(".sign_up"), icon: "check", active: sidebar == "signup" %>
+    <%= navigation_delimiter %>
+    <%= navigation_link_item locale_path(lang: 'en'), title: t("lang.en"), icon: "translate", data: { turbo_method: :patch } %>
+    <%= navigation_link_item locale_path(lang: 'ja'), title: t("lang.ja"), icon: "translate", data: { turbo_method: :patch } %>
   <% end %>
-
-  <%= navigation_delimiter %>
-  <%= navigation_link_item locale_path(lang: 'en'), title: t("lang.en"), icon: "translate", data: { turbo_method: :patch } %>
-  <%= navigation_link_item locale_path(lang: 'ja'), title: t("lang.ja"), icon: "translate", data: { turbo_method: :patch } %>
 
   <% if Rails.env.development? %>
     <%= navigation_delimiter %>
