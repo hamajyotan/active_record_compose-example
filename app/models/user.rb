@@ -5,5 +5,7 @@ class User < ApplicationRecord
   has_one :user_resignation
   has_many :posts
 
-  delegate :name, :lang, to: :user_profile, allow_nil: true
+  delegate :lang, to: :user_profile, allow_nil: true
+
+  def name = user_profile&.name || I18n.t("resigned_user")
 end

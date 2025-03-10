@@ -2,6 +2,7 @@ ja:
   application_name: "ActiveRecordCompose Example"
   back: "戻る"
   please_log_in_first: "先にログインしてください"
+  resigned_user: "退会済みユーザ"
 
   lang:
     en: "Engligh"

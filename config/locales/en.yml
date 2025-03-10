@@ -2,6 +2,7 @@ en:
   application_name: "ActiveRecordCompose Example"
   back: "Back"
   please_log_in_first: "Please log in first"
+  resigned_user: "Resigned user"
 
   lang:
     en: "English"
