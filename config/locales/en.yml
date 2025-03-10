@@ -20,3 +20,7 @@ en:
       title: "Sign-up"
     create:
       created: "We have sent you an email, please check it."
+  user_registrations:
+    confirmations:
+      create:
+        created: "Registered"

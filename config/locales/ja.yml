@@ -20,3 +20,7 @@ ja:
       title: "ユーザ登録"
     create:
       created: "メールを送信しましたので、ご確認ください。"
+  user_registrations:
+    confirmations:
+      create:
+        created: "登録しました"

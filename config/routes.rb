@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   resources :user_registration_requests, only: %i[new create]
+  resources :user_registrations, only: %i[] do
+    scope module: :user_registrations do
+      resource :confirmation, only: %i[new create]
+    end
+  end
   resource :locale, only: %i[update]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

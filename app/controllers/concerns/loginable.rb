@@ -10,4 +10,6 @@ module Loginable
   def logged_in? = current_user.present?
 
   def current_user = nil # TODO: need to implement it
+
+  def sign_in(user_credential) = nil # TODO: need to implement it
 end

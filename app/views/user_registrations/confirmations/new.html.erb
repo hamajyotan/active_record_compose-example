@@ -1,0 +1,24 @@
+<%= form_with model: @confirmation, url: user_registration_confirmation_path(@user_registration), scope: :confirmation do |f| %>
+  <%= f.model_base_error %>
+
+  <div class="mb-3">
+    <%= f.label :password, class: %[form-label] %>
+    <%= f.password_field :password, class: %[form-control], autofocus: true %>
+    <%= f.invalid_feedback :password %>
+ </div>
+
+  <div class="mb-3">
+    <%= f.label :password_confirmation, class: %[form-label] %>
+    <%= f.password_field :password_confirmation, class: %[form-control] %>
+    <%= f.invalid_feedback :password_confirmation %>
+ </div>
+
+  <div class="mb-3">
+    <%= f.label :name, class: %[form-label] %>
+    <%= f.text_field :name, class: %[form-control] %>
+    <%= f.invalid_feedback :name %>
+ </div>
+
+  <%= f.submit class: %[btn btn-primary] %>
+  <%= hidden_field_tag :token, @user_registration.token %>
+<% end %>
