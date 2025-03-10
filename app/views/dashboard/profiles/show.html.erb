@@ -1,0 +1,20 @@
+<% content_for :title, t(".title") %>
+<% content_for :sidebar_current, "profile" %>
+
+<%= form_with model: @dashboard_profile, url: dashboard_profile_path do |f| %>
+  <%= f.model_base_error %>
+
+  <div class="mb-3">
+    <%= f.label :name, class: %w[form-label] %>
+    <%= f.text_field :name, class: %w[form-control], autofocus: true %>
+    <%= f.invalid_feedback :name %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :lang, class: %w[form-label] %>
+    <%= f.select :lang, I18n.available_locales, {}, class: %w[form-select] %>
+    <%= f.invalid_feedback :lang %>
+  </div>
+
+  <%= f.submit class: %w[btn btn-primary] %>
+<% end %>

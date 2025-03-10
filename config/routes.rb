@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :dashboard, path: "_" do
     resource :password, only: %i[show update]
+    resource :profile, only: %i[show update]
   end
   resources :user_registration_requests, only: %i[new create]
   resources :user_registrations, only: %i[] do

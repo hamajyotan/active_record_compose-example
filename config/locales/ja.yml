@@ -11,6 +11,7 @@ ja:
     sidebar:
       home: "ホーム"
       password: "パスワード変更"
+      profile: "プロフィール"
       sign_out: "ログアウト"
       sign_up: "ユーザ登録"
       login: "ログイン"
@@ -20,6 +21,11 @@ ja:
         title: "パスワード変更"
       update:
         updated: "パスワードを変更しました"
+    profiles:
+      show:
+        title: "プロフィール"
+      update:
+        updated: "プロフィールを変更しました"
   sessions:
     new:
       title: "ログイン"
