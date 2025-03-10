@@ -17,6 +17,7 @@ en:
           has_one: Cannot delete record because a dependent %{record} exists
           has_many: Cannot delete record because dependent %{record} exist
   attributes:
+    content: Content
     email: Email
     lang: Language
     name: Name
