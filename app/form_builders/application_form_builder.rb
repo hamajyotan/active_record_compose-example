@@ -23,6 +23,10 @@ class ApplicationFormBuilder < ActionView::Helpers::FormBuilder
     super(method, with_invalid_class(options, method))
   end
 
+  def select(method, choices = nil, options = {}, html_options = {}, &block)
+    super(method, choices, options, with_invalid_class(html_options, method), &block)
+  end
+
   def invalid_feedback(method)
     return if object.errors[method].blank?
 
