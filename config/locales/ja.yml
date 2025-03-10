@@ -10,9 +10,16 @@ ja:
   application:
     sidebar:
       home: "ホーム"
+      password: "パスワード変更"
       sign_out: "ログアウト"
       sign_up: "ユーザ登録"
       login: "ログイン"
+  dashboard:
+    passwords:
+      show:
+        title: "パスワード変更"
+      update:
+        updated: "パスワードを変更しました"
   sessions:
     new:
       title: "ログイン"

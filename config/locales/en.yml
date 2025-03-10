@@ -10,9 +10,16 @@ en:
   application:
     sidebar:
       home: "Home"
+      password: "Change password"
       sign_out: "Sign-out"
       sign_up: "Sign-up"
       login: "Login"
+  dashboard:
+    passwords:
+      show:
+        title: "Change password"
+      update:
+        updated: "Password changed"
   sessions:
     new:
       title: "Login"

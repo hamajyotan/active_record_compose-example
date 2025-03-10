@@ -1,0 +1,20 @@
+<% content_for :title, t(".title") %>
+<% content_for :sidebar_current, "password" %>
+
+<%= form_with model: @dashboard_password, url: dashboard_password_path do |f| %>
+  <%= f.model_base_error %>
+
+  <div class="mb-3">
+    <%= f.label :password, class: %[form-label] %>
+    <%= f.password_field :password, class: %[form-control], autofocus: true %>
+    <%= f.invalid_feedback :password %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :password_confirmation, class: %[form-label] %>
+    <%= f.password_field :password_confirmation, class: %[form-control] %>
+    <%= f.invalid_feedback :password_confirmation %>
+  </div>
+
+  <%= f.submit class: %[btn btn-primary] %>
+<% end %>

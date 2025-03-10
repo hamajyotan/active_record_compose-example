@@ -4,6 +4,7 @@
   <%= navigation_link_item root_path, title: t(".home"), icon: "house", active: sidebar == "home" %>
 
   <% if logged_in? %>
+    <%= navigation_link_item dashboard_password_path, title: t(".password"), icon: "key", active: sidebar == "password" %>
     <%= navigation_link_item session_path, title: t(".sign_out"), icon: "box-arrow-right", data: { turbo_method: :delete } %>
   <% else %>
     <%= navigation_link_item new_session_path, title: t(".login"), icon: "box-arrow-in-right", active: sidebar == "login" %>
