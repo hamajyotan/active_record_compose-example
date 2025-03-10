@@ -1,22 +1,22 @@
 # ActiveRecordCompose Example Application
 
-This repository is a sample application using the gem [active_record_compopse](https://github.com/hamajyotan/active_record_compose).
+このリポジトリは gem [active_record_compopse](https://github.com/hamajyotan/active_record_compose) を使ったサンプルアプリケーションです。
 
 - [README (engligh)](README.md)
 - [README (japanense)](README.ja.md)
 
-# How to Start
+# 起動方法
 
-Since this is a standard Rails application, you can start it with `bin/setup --skip-server` and `bin/rails s`.
-It can also be launched in a VS Code dev container.
-Additionally, you can run the development environment on GitHub Codespaces, not just on your local machine.
+一般的な Rails アプリケーションなので `bin/setup --skip-server` および `bin/rails s` で起動できます。
+vscode devcontainer での起動も可能です。
+また、ローカル開発環境でなくとも GitHub Codespaces でも開発環境を動かすことができます。
 
-## Open in a codespace
+## codespace で開く
 
-ActiveRecordCompose Example is a template repository, allowing you to open a development environment in Codespaces as is.
-You can open a Codespace directly by navigating to https://github.com/hamajyotan/active_record_compose-sample and selecting `Use this template` > `Open in a codespace`.
+ActiveRecordCompose Example は Template repository であり、そのまま codespace で開発環境を開くことができます。
+https://github.com/hamajyotan/active_record_compose-sample から `Use this template` > `Open in a codespace` により codespace をそのまま開くことができます。
 
-After opening in Codespaces, please refer to [README.codespaces.md](README.codespaces.md).
+codespace で開いた後は [README.codespaces.ja.md](README.codespaces.ja.md) を参照ください。
 
 ![](doc/open-in-a-codespace.png)
 
