@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_registration_requests, only: %i[new create]
   resource :locale, only: %i[update]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

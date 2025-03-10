@@ -1,5 +1,6 @@
 ja:
   application_name: "ActiveRecordCompose Example"
+  back: "戻る"
 
   lang:
     en: "Engligh"
@@ -8,3 +9,9 @@ ja:
   application:
     sidebar:
       home: "ホーム"
+      sign_up: "ユーザ登録"
+  user_registration_requests:
+    new:
+      title: "ユーザ登録"
+    create:
+      created: "メールを送信しましたので、ご確認ください。" # TODO: need to implement it

@@ -1,5 +1,6 @@
 en:
   application_name: "ActiveRecordCompose Example"
+  back: "Back"
 
   lang:
     en: "English"
@@ -8,3 +9,9 @@ en:
   application:
     sidebar:
       home: "Home"
+      sign_up: "Sign-up"
+  user_registration_requests:
+    new:
+      title: "Sign-up"
+    create:
+      created: "We have sent you an email, please check it." # TODO: need to implement it

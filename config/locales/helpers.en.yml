@@ -7,3 +7,6 @@ en:
       create: Create %{model}
       submit: Save %{model}
       update: Update %{model}
+
+      user_registration_request:
+        create: Sign up

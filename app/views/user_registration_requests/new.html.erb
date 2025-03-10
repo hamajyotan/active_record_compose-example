@@ -1,0 +1,18 @@
+<% content_for :title, t(".title") %>
+<% content_for :sidebar_current, "signup" %>
+
+<%= form_with model: @user_registration_request do |f| %>
+  <%= f.model_base_error %>
+
+  <div class="mb-3">
+    <%= f.label :email, class: %[form-label] %>
+    <%= f.email_field :email, class: %[form-control], autofocus: true %>
+    <%= f.invalid_feedback :email %>
+  </div>
+
+  <%= f.submit class: %[btn btn-primary] %>
+<% end %>
+
+<br>
+
+<%= link_to t("back"), root_path %>
