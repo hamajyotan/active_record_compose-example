@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: null
+  email: foo@example.com
+  token: 83713a816c4ff18e08539c985fd5b5c3
+  expires_at: 2025-02-22 06:59:36
+
+two:
+  user: null
+  email: bar@example.com
+  token: 7b0b325933a505a931f8eb97ebd85c5a
+  expires_at: 2025-02-22 06:59:36

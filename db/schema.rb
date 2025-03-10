@@ -10,9 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_22_065832) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_22_065936) do
+  create_table "user_registrations", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "email", null: false
+    t.string "token", null: false
+    t.datetime "expires_at", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["token"], name: "index_user_registrations_on_token", unique: true
+    t.index ["user_id"], name: "index_user_registrations_on_user_id", unique: true
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_foreign_key "user_registrations", "users"
 end
