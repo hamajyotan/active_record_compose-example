@@ -13,6 +13,10 @@ en:
           has_many: Cannot delete record because dependent %{record} exist
   attributes:
     email: Email
+    lang: Language
+    name: Name
+    password: Password
+    password_confirmation: Re-enter your new password
   errors:
     format: "%{attribute} %{message}"
     messages:
