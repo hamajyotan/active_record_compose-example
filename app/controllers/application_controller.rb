@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include SwitchLocale
+  include Loginable
 
   default_form_builder ApplicationFormBuilder
 
