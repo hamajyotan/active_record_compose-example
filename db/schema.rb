@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_05_020945) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_10_091505) do
   create_table "posts", force: :cascade do |t|
     t.integer "user_id", null: false
     t.text "content", null: false
@@ -49,6 +49,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_05_020945) do
     t.index ["user_id"], name: "index_user_registrations_on_user_id", unique: true
   end
 
+  create_table "user_resignations", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.text "reason"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_resignations_on_user_id", unique: true
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -58,4 +66,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_05_020945) do
   add_foreign_key "user_credentials", "users"
   add_foreign_key "user_profiles", "users"
   add_foreign_key "user_registrations", "users"
+  add_foreign_key "user_resignations", "users"
 end
