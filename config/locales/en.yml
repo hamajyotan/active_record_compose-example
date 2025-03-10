@@ -10,8 +10,13 @@ en:
     sidebar:
       home: "Home"
       sign_up: "Sign-up"
+  user_registration_mailer:
+    requested:
+      subject: "User registration has not yet been completed."
+      description_1: "To continue user registration, please review the following links"
+      description_2: "If you do not recognize this email, please ignore it."
   user_registration_requests:
     new:
       title: "Sign-up"
     create:
-      created: "We have sent you an email, please check it." # TODO: need to implement it
+      created: "We have sent you an email, please check it."

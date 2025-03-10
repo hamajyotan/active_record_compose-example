@@ -10,8 +10,13 @@ ja:
     sidebar:
       home: "ホーム"
       sign_up: "ユーザ登録"
+  user_registration_mailer:
+    requested:
+      subject: "ユーザ登録はまだ完了していません。"
+      description_1: "ユーザ登録を続けるために、以下のリンクを確認してください。"
+      description_2: "また、このメールが身に覚えのないものである場合はそのまま無視してください。"
   user_registration_requests:
     new:
       title: "ユーザ登録"
     create:
-      created: "メールを送信しましたので、ご確認ください。" # TODO: need to implement it
+      created: "メールを送信しましたので、ご確認ください。"
