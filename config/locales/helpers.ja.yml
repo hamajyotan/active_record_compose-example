@@ -14,3 +14,5 @@ ja:
         create: ログイン
       user_registration_request:
         create: サインアップ
+      dashboard_resignation:
+        create: 退会する

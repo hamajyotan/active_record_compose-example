@@ -9,6 +9,14 @@ en:
           attributes:
             base:
               login_failed: Sign in failed
+        dashboard/resignation:
+          attributes:
+            accept:
+              blank: Please check the box
+    attributes:
+      dashboard/resignation:
+        accept: Please check the box to cancel your membership
+        reason: Resign reason
   activerecord:
     errors:
       messages:

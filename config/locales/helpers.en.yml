@@ -14,3 +14,5 @@ en:
         create: Login
       user_registration_request:
         create: Sign up
+      dashboard_resignation:
+        create: Resign

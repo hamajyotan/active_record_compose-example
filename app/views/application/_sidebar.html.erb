@@ -6,6 +6,7 @@
   <% if logged_in? %>
     <%= navigation_link_item dashboard_profile_path, title: t(".profile"), icon: "person", active: sidebar == "profile" %>
     <%= navigation_link_item dashboard_password_path, title: t(".password"), icon: "key", active: sidebar == "password" %>
+    <%= navigation_link_item new_dashboard_resignation_path, title: t(".resignation"), icon: "escape", active: sidebar == "resignation" %>
     <%= navigation_link_item session_path, title: t(".sign_out"), icon: "box-arrow-right", data: { turbo_method: :delete } %>
   <% else %>
     <%= navigation_link_item new_session_path, title: t(".login"), icon: "box-arrow-in-right", active: sidebar == "login" %>

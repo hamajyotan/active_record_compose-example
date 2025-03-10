@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resource :password, only: %i[show update]
     resource :profile, only: %i[show update]
     resource :post, only: %i[new create]
+    resource :resignation, only: %i[new create]
   end
   resources :user_registration_requests, only: %i[new create]
   resources :user_registrations, only: %i[] do

@@ -9,6 +9,14 @@ ja:
           attributes:
             base:
               login_failed: ログインに失敗しました
+        dashboard/resignation:
+          attributes:
+            accept:
+              blank: チェックを入れてください
+    attributes:
+      dashboard/resignation:
+        accept: 退会する場合はチェックを入れてください
+        reason: 退会理由
   activerecord:
     errors:
       messages:

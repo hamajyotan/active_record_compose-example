@@ -14,6 +14,7 @@ ja:
       home: "ホーム"
       password: "パスワード変更"
       profile: "プロフィール"
+      resignation: "退会"
       sign_out: "ログアウト"
       sign_up: "ユーザ登録"
       login: "ログイン"
@@ -31,6 +32,11 @@ ja:
         title: "プロフィール"
       update:
         updated: "プロフィールを変更しました"
+    resignations:
+      new:
+        title: "退会"
+      create:
+        created: "退会しました"
   posts:
     load_more:
       load_more: "さらに読み込む"

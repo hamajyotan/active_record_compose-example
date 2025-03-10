@@ -14,6 +14,7 @@ en:
       home: "Home"
       password: "Change password"
       profile: "Profile"
+      resignation: "Resign"
       sign_out: "Sign-out"
       sign_up: "Sign-up"
       login: "Login"
@@ -31,6 +32,11 @@ en:
         title: "Profile"
       update:
         updated: "Profile changed"
+    resignations:
+      new:
+        title: "Resign"
+      create:
+        created: "Resigned"
   posts:
     load_more:
       load_more: "Load more"
