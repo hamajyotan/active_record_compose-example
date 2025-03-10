@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :dashboard, path: "_" do
     resource :password, only: %i[show update]
     resource :profile, only: %i[show update]
+    resource :post, only: %i[new create]
   end
   resources :user_registration_requests, only: %i[new create]
   resources :user_registrations, only: %i[] do
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
       resource :confirmation, only: %i[new create]
     end
   end
+  resources :posts, only: %i[index]
   resource :session, only: %i[new create destroy]
   resource :locale, only: %i[update]
 

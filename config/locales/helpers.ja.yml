@@ -8,6 +8,8 @@ ja:
       submit: 保存する
       update: 更新する
 
+      post:
+        create: ポストする
       session:
         create: ログイン
       user_registration_request:

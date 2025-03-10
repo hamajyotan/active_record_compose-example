@@ -8,6 +8,8 @@ en:
     ja: "日本語"
 
   application:
+    loading:
+      loading: "Loading..."
     sidebar:
       home: "Home"
       password: "Change password"
@@ -21,11 +23,17 @@ en:
         title: "Change password"
       update:
         updated: "Password changed"
+    posts:
+      form:
+        what_is_happening: "What is happening?!"
     profiles:
       show:
         title: "Profile"
       update:
         updated: "Profile changed"
+  posts:
+    load_more:
+      load_more: "Load more"
   sessions:
     new:
       title: "Login"

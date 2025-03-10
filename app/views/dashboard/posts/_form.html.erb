@@ -1,0 +1,9 @@
+<%= form_with model: post, url: dashboard_post_path, class: %w[form-floating] do |f| %>
+  <%= f.text_field :content, class: %w[form-control].tap { _1 << "is-invalid" if f.object.errors.present? }, placeholder: t('.what_is_happening'), autofocus: true, required: true %>
+  <%= f.label :content, t('.what_is_happening') %>
+  <% if f.object.errors.present? %>
+    <%= tag.div f.object.errors.to_a.first, class: %w[invalid-feedback] %>
+  <% end %>
+
+  <%= f.submit class: %[btn btn-primary mt-2] %>
+<% end %>

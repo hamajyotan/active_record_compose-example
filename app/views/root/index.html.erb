@@ -1,1 +1,11 @@
 <% content_for :sidebar_current, "home" %>
+
+<% if logged_in? %>
+  <%= turbo_frame_tag :new_post, src: new_dashboard_post_path, loading: :lazy do %>
+    <%= render 'loading' %>
+  <% end %>
+<% end %>
+
+<%= turbo_frame_tag :posts_content, src: posts_path, loading: :lazy do %>
+  <%= render 'loading' %>
+<% end %>

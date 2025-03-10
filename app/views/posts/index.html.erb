@@ -1,0 +1,19 @@
+<% content_for :sidebar_current, "home" %>
+
+<% if logged_in? %>
+  <%= turbo_frame_tag :new_post, src: new_dashboard_post_path, loading: :lazy do %>
+    <%= render 'loading' %>
+  <% end %>
+<% end %>
+
+<%= turbo_frame_tag :posts_content do %>
+  <%= turbo_stream_from :posts %>
+
+  <%= turbo_frame_tag :posts do %>
+    <%= render @posts %>
+  <% end %>
+
+  <% if @posts.present? %>
+    <%= render "load_more", last_post_id: @posts.last.id %>
+  <% end %>
+<% end %>

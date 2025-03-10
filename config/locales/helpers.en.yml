@@ -8,6 +8,8 @@ en:
       submit: Save %{model}
       update: Update %{model}
 
+      post:
+        create: Post
       session:
         create: Login
       user_registration_request:

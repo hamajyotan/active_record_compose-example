@@ -8,6 +8,8 @@ ja:
     ja: "日本語"
 
   application:
+    loading:
+      loading: "Loading..."
     sidebar:
       home: "ホーム"
       password: "パスワード変更"
@@ -21,11 +23,17 @@ ja:
         title: "パスワード変更"
       update:
         updated: "パスワードを変更しました"
+    posts:
+      form:
+        what_is_happening: "いまどうしてる？"
     profiles:
       show:
         title: "プロフィール"
       update:
         updated: "プロフィールを変更しました"
+  posts:
+    load_more:
+      load_more: "さらに読み込む"
   sessions:
     new:
       title: "ログイン"

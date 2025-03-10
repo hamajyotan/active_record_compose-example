@@ -1,0 +1,11 @@
+<%= turbo_stream.append :posts do %>
+  <%= render @posts %>
+<% end %>
+
+<% if @posts.present? %>
+  <%= turbo_stream.replace :load_more do %>
+    <%= render "load_more", last_post_id: @posts.last.id %>
+  <% end %>
+<% else %>
+  <%= turbo_stream.remove :load_more %>
+<% end %>
