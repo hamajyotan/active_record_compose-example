@@ -1,7 +1,7 @@
 # ActiveRecordCompose Example Application
 
 ActiveRecordCompose Example is a template repository, allowing you to open a development environment in Codespaces as is.
-You can open a Codespace directly by navigating to https://github.com/hamajyotan/active_record_compose-sample and selecting `Use this template` > `Open in a codespace`.
+You can open a Codespace directly by navigating to https://github.com/hamajyotan/active_record_compose-example and selecting `Use this template` > `Open in a codespace`.
 
 ![](doc/open-in-a-codespace.png)
 

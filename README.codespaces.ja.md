@@ -1,7 +1,7 @@
 # ActiveRecordCompose Example Application
 
 ActiveRecordCompose Example は Template repository であり、そのまま codespace で開発環境を開くことができます。
-https://github.com/hamajyotan/active_record_compose-sample から `Use this template` > `Openin a codespace` により codespace をそのまま開くことができます。
+https://github.com/hamajyotan/active_record_compose-example から `Use this template` > `Openin a codespace` により codespace をそのまま開くことができます。
 
 ![](doc/open-in-a-codespace.png)
 

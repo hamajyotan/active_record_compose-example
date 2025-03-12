@@ -23,7 +23,7 @@ vscode devcontainer での起動も可能です。
 ## codespace で開く
 
 ActiveRecordCompose Example は Template repository であり、そのまま codespace で開発環境を開くことができます。
-https://github.com/hamajyotan/active_record_compose-sample から `Use this template` > `Open in a codespace` により codespace をそのまま開くことができます。
+https://github.com/hamajyotan/active_record_compose-example から `Use this template` > `Open in a codespace` により codespace をそのまま開くことができます。
 
 codespace で開いた後は [README.codespaces.ja.md](README.codespaces.ja.md) を参照ください。
 

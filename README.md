@@ -23,7 +23,7 @@ Additionally, you can run the development environment on GitHub Codespaces, not 
 ## Open in a codespace
 
 ActiveRecordCompose Example is a template repository, allowing you to open a development environment in Codespaces as is.
-You can open a Codespace directly by navigating to https://github.com/hamajyotan/active_record_compose-sample and selecting `Use this template` > `Open in a codespace`.
+You can open a Codespace directly by navigating to https://github.com/hamajyotan/active_record_compose-example and selecting `Use this template` > `Open in a codespace`.
 
 After opening in Codespaces, please refer to [README.codespaces.md](README.codespaces.md).
 
