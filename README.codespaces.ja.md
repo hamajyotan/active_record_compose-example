@@ -13,14 +13,19 @@ codespace を開いてしばらくすると、コンソールでセットアッ�
 
 ![](doc/bin-rails-server.png)
 
-この時点ではセキュリティのためにポートは外部解放されていません。
-`PORTS` > `Visibility` から `Private` に設定されている箇所でメニューを開き、 `Port Visibility` > `Public` に変更します。
+起動すると、 3000番ポートを公開するか否かを問われるダイアログが表示されます。
+この時点ではセキュリティのためにポートは外部解放されていませんが、`公開用にする` を応答すると、ポートを公開することになりアクセス可能になります。
 
-![](doc/change-port-visibility-to-public.png)
+![](doc/port-visibility-dialog.ja.png)
 
-`Frowarded Address` にある URL からアプリケーションの動作を確認できます。
+ダイアログへの応答できなかった場合は以下の手順でポートを公開します。
+`ポート` > `表示範囲` から `Private` に設定されている箇所でメニューを開き、 `ポートの表示範囲` > `Public` に変更します。
 
-![](doc/forwarded-address.png)
+![](doc/change-port-visibility-to-public.ja.png)
+
+`転送されたアドレス` にある URL からアプリケーションの動作を確認できます。
+
+![](doc/forwarded-address.ja.png)
 
 別のウィンドウからリンク先をひらくと、はじめの1回は警告表示されます。 `Continue` を応答します。
 

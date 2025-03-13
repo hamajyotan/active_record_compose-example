@@ -13,8 +13,13 @@ From the console, you can start the application as a normal Rails app using the 
 
 ![](doc/bin-rails-server.png)
 
-At this stage, the port is not exposed externally for security reasons.
-To allow access, navigate to `PORTS` > `Visibility`, open the menu at the `Private` setting, and change `Port Visibility` to `Public`.
+When launching, a dialog will appear asking whether to expose port 3000.
+At this point, the port is not accessible externally for security reasons. However, if you select `Make Public`, the port will be exposed and accessible.
+
+![](doc/port-visibility-dialog.png)
+
+If you were unable to respond to the dialog, you can manually expose the port by following these steps:
+Go to `PORTS` > `Visibility`, open the menu where it is set to `Private`, and change `Port Visibility` to `Public`.
 
 ![](doc/change-port-visibility-to-public.png)
 
@@ -23,7 +28,6 @@ You can now access the application from the `Forwarded Address` URL.
 ![](doc/forwarded-address.png)
 
 When opening the link in a new window for the first time, a warning message will appear. Click `Continue` to proceed.
-別のウィンドウからリンク先をひらくと、はじめの1回は警告表示されます。 `Continue` を応答します。
 
 ![](doc/port-visibility-warn.png)
 
