@@ -2,8 +2,24 @@
 
 one:
   user: one
-  content: MyText
+  content: "one's first post message"
 
 two:
   user: two
-  content: MyText
+  content: "two's first post message"
+
+three:
+  user: one
+  content: "one's seond post message"
+
+four:
+  user: one
+  content: "one's third post message!"
+
+five:
+  user: one
+  content: "one's 4th post <3"
+
+six:
+  user: one
+  content: "AWESOME!!!"
