@@ -14,6 +14,6 @@ class UserRegistration < ApplicationRecord
   private
 
   def set_token
-    self.token ||= loop.lazy.map { SecureRandom.hex }.find { !self.class.exists?(token: _1) }
+    self.token ||= loop.lazy.map { SecureRandom.hex }.find { !self.class.exists?(token: it) }
   end
 end

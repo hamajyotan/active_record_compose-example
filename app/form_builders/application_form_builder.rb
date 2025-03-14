@@ -3,7 +3,7 @@ class ApplicationFormBuilder < ActionView::Helpers::FormBuilder
     return if object.errors[:base].none?
 
     tag.ul class: %w[alert alert-warning list-unstyled], role: "alert" do
-      safe_join object.errors[:base].map { tag.li _1 }
+      safe_join object.errors[:base].map { tag.li it }
     end
   end
 
@@ -30,7 +30,7 @@ class ApplicationFormBuilder < ActionView::Helpers::FormBuilder
   def invalid_feedback(method)
     return if object.errors[method].blank?
 
-    safe_join object.errors[method].map { tag.div _1, class: %w[invalid-feedback] }
+    safe_join object.errors[method].map { tag.div it, class: %w[invalid-feedback] }
   end
 
   private

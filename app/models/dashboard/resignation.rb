@@ -1,7 +1,7 @@
 class Dashboard::Resignation < ActiveRecordCompose::Model
   def initialize(user)
     @user = user
-    @user_resignation = user.then { _1.user_resignation || _1.build_user_resignation }
+    @user_resignation = user.then { it.user_resignation || it.build_user_resignation }
     models.push(user_resignation)
     models.push(user_profile, destroy: true)
     models.push(user_credential, destroy: true)
