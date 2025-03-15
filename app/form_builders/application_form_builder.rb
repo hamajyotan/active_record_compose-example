@@ -2,7 +2,7 @@ class ApplicationFormBuilder < ActionView::Helpers::FormBuilder
   def model_base_error
     return if object.errors[:base].none?
 
-    tag.ul class: %w[alert alert-warning list-unstyled], role: "alert" do
+    tag.ul class: %w[model-base-error alert alert-warning list-unstyled], role: "alert" do
       safe_join object.errors[:base].map { tag.li it }
     end
   end
