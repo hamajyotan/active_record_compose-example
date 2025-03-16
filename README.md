@@ -20,14 +20,17 @@ Since this is a standard Rails application, you can start it with `bin/setup --s
 It can also be launched in a VS Code dev container.
 Additionally, you can run the development environment on GitHub Codespaces, not just on your local machine.
 
-## Open in a codespace
+## Open in a GitHub Codespaces
 
-ActiveRecordCompose Example is a template repository, allowing you to open a development environment in Codespaces as is.
-You can open a Codespace directly by navigating to https://github.com/hamajyotan/active_record_compose-example and selecting `Use this template` > `Open in a codespace`.
+you can open it from the following link:
 
-After opening in Codespaces, please refer to [README.codespaces.md](README.codespaces.md).
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/hamajyotan/active_record_compose-example)
 
-![](doc/open-in-a-codespace.png)
+After clicking the link, you can start it from `Create new codespace`.
+
+![](doc/create-codespace.png)
+
+After opening in GitHub Codespaces, please refer to [README.codespaces.md](README.codespaces.md).
 
 # Regarding the program code:
 

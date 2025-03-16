@@ -1,11 +1,14 @@
 # ActiveRecordCompose Example Application
 
-ActiveRecordCompose Example is a template repository, allowing you to open a development environment in Codespaces as is.
-You can open a Codespace directly by navigating to https://github.com/hamajyotan/active_record_compose-example and selecting `Use this template` > `Open in a codespace`.
+you can open it from the following link:
 
-![](doc/open-in-a-codespace.png)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/hamajyotan/active_record_compose-example)
 
-After opening the Codespace, you will see a confirmation in the console once the setup is complete.
+After clicking the link, you can start it from `Create new codespace`.
+
+![](doc/create-codespace.png)
+
+After starting the Codespace, you will see a confirmation in the console once the setup is complete.
 
 ![](doc/finished-configuring-codespace.png)
 
@@ -35,6 +38,6 @@ After clicking `Continue`, you should see the application running successfully.
 
 ![](doc/application-was-able-to-start.png)
 
-By default, the container is automatically deleted, but if needed, you can manually delete it from https://github.com/codespaces .
+By default, the codespace is automatically deleted, but if needed, you can manually delete it from https://github.com/codespaces .
 
 ![](doc/stop-codespaces.png)
