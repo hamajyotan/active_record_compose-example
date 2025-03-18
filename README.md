@@ -1,6 +1,6 @@
 # ActiveRecordCompose Example Application
 
-This repository is a sample application using the gem [active_record_compopse](https://github.com/hamajyotan/active_record_compose).
+This repository is a sample application using the gem [active_record_compose](https://github.com/hamajyotan/active_record_compose).
 
 - [README (engligh)](README.md)
 - [README (japanense)](README.ja.md)
@@ -45,7 +45,7 @@ Among them, the following files are models that inherit from `ApplicationRecord`
 - `Post`
 
 The other files in `app/models/*` are models that inherit from `ActiveRecordCompose::Model`,
-serving as examples of using the [active_record_compopse](https://github.com/hamajyotan/active_record_compose) gem.
+serving as examples of using the [active_record_compose](https://github.com/hamajyotan/active_record_compose) gem.
 
 ## Excerpt from ActiveRecordCompose::Model Usage
 
