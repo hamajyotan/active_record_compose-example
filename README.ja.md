@@ -1,6 +1,6 @@
 # ActiveRecordCompose Example Application
 
-このリポジトリは gem [active_record_compopse](https://github.com/hamajyotan/active_record_compose) を使ったサンプルアプリケーションです。
+このリポジトリは gem [active_record_compose](https://github.com/hamajyotan/active_record_compose) を使ったサンプルアプリケーションです。
 
 - [README (engligh)](README.md)
 - [README (japanense)](README.ja.md)
@@ -45,7 +45,7 @@ GitHub Codespace で開いた後は [README.codespaces.ja.md](README.codespaces.
 - `Post`
 
 `app/models/*` の上記以外のファイルは `ActiveRecordCompose::Model` をスーパークラスとするモデルであり、
-gem [active_record_compopse](https://github.com/hamajyotan/active_record_compose) の用例となっています。
+gem [active_record_compose](https://github.com/hamajyotan/active_record_compose) の用例となっています。
 
 ## ActiveRecordCompose::Model 使用例としての抜粋
 
