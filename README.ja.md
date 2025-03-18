@@ -2,8 +2,8 @@
 
 このリポジトリは gem [active_record_compose](https://github.com/hamajyotan/active_record_compose) を使ったサンプルアプリケーションです。
 
-- [README (engligh)](README.md)
-- [README (japanense)](README.ja.md)
+- [README (English)](README.md)
+- [README (日本語)](README.ja.md)
 
 簡易的なマイクロポストアプリケーションです。
 

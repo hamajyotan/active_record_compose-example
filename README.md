@@ -2,8 +2,8 @@
 
 This repository is a sample application using the gem [active_record_compose](https://github.com/hamajyotan/active_record_compose).
 
-- [README (engligh)](README.md)
-- [README (japanense)](README.ja.md)
+- [README (English)](README.md)
+- [README (日本語)](README.ja.md)
 
 This is a simple micropost application.
 
