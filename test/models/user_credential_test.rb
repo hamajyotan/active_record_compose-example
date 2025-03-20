@@ -51,8 +51,8 @@ class UserCredentialTest < ActiveSupport::TestCase
     user = users(:three)
     user_credential = user.build_user_credential
     user_credential.email = "three@example.com"
-    user_credential.password = "foo"
-    user_credential.password_confirmation = "foo"
+    user_credential.password = "P@ssW0rd!!!!"
+    user_credential.password_confirmation = "P@ssW0rd!!!!"
     assert user_credential.valid?
     assert_not_nil user_credential.token
   end

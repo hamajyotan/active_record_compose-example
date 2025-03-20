@@ -30,7 +30,7 @@ class SessionExpirationTest < ActionDispatch::IntegrationTest
   end
 
   def change_password(session)
-    session.patch dashboard_password_path, params: { dashboard_password: { password: "NewP@ssW0rd", password_confirmation: "NewP@ssW0rd" } }
+    session.patch dashboard_password_path, params: { dashboard_password: { password: "NewP@ssW0rd!", password_confirmation: "NewP@ssW0rd!" } }
     assert_equal session.response.code.to_i, 303
   end
 end

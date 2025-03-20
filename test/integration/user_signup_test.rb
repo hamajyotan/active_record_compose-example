@@ -33,7 +33,7 @@ class UserSignupTest < ActionDispatch::IntegrationTest
     assert_difference -> { User.count } => 1 do
       post user_registration_confirmation_path(user_registration), params: {
         token: user_registration.token,
-        confirmation: { password: "P@ssW0rd", password_confirmation: "P@ssW0rd", name: "Alice" }
+        confirmation: { password: "P@ssW0rd!!!!", password_confirmation: "P@ssW0rd!!!!", name: "Alice" }
       }
       assert_redirected_to root_path
       follow_redirect!
