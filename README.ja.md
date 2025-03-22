@@ -10,7 +10,7 @@
 - ユーザ登録をするとポストできるようになります
 - 無条件に、他者のポストも参照できます
 - ユーザ間のフォロー機能などはありません
-- なお、 development では実際のメール送信はしません。 [letter_opener_web](https://rubygems.org/gems/letter_opener_web) でメール送信を模倣しています。
+- なお、 development では実際のメール送信はしません。 [letter_opener_web](https://rubygems.org/gems/letter_opener_web) でメール送信を模倣しており、開発環境に限り `/letter_opener` のパスからアクセスできます。
 
 ![](doc/micropost-application.gif)
 
