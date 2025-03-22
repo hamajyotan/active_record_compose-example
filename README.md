@@ -10,7 +10,7 @@ This is a simple micropost application.
 - Users can post after registering.
 - All posts are viewable without restrictions.
 - There is no follow function between users.
-- In the development environment, actual email sending is not performed. Email sending is simulated using [letter_opener_web](https://rubygems.org/gems/letter_opener_web), and it can be accessed from the /letter_opener path only in the development environment.
+- In the development environment, actual email sending is not performed. Email sending is simulated using [letter_opener_web](https://rubygems.org/gems/letter_opener_web), and it can be accessed from the `/letter_opener` path only in the development environment.
 
 ![](doc/micropost-application.gif)
 
