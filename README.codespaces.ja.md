@@ -12,6 +12,14 @@ codespace を起動してしばらくすると、コンソールでセットア�
 
 ![](doc/finished-configuring-codespace.png)
 
+なお、起動処理の途中 steep エクステンションの初期化でエラーが生じたり、 ruby-lsp により migration が未実施であることが通知されますがこれは一時的なものです。
+セットアッププロセス `bin/setup` の中でこの問題は解決されるのでそのまま応答しなくても問題ありません。
+(また、ダイアログ表示時点で `Run Migrations` を応答しても悪影響はありません)
+
+![](doc/steep-initialization-error.ja.png)
+
+![](doc/migrations-are-pending.ja.png)
+
 コンソールから通常の Rails アプリケーションとして `bin/rails s` コマンドで起動できます。
 
 ![](doc/bin-rails-server.png)

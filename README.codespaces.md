@@ -12,6 +12,14 @@ After starting the Codespace, you will see a confirmation in the console once th
 
 ![](doc/finished-configuring-codespace.png)
 
+During the startup process, you may temporarily encounter errors during the initialization of the Steep extension or receive notifications from ruby-lsp indicating that migrations have not been performed. However, this is only a temporary issue.
+This issue will be resolved as part of the setup process (`bin/setup`), so you can safely ignore it.
+(Additionally, responding with `Run Migrations` when the dialog appears will not cause any problems.)
+
+![](doc/steep-initialization-error.png)
+
+![](doc/migrations-are-pending.png)
+
 From the console, you can start the application as a normal Rails app using the `bin/rails s` command.
 
 ![](doc/bin-rails-server.png)
