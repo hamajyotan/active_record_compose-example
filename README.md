@@ -95,7 +95,7 @@ resignation = Dashboard::Resignation.new(user)
 resignation.reason = "It's hard to use"
 resignation.save          # => false
 resignation.errors        # => #<ActiveModel::Errors [#<ActiveModel::Error attribute=accept, type=blank, options={}>]>
-resignation.errors.to_a   # => ["Please check the box to cancel your membership Please check the box"]
+resignation.errors.to_a   # => ["Please check the box"]
 resignation.accept = true
 resignation.save          # => true
                           # BEGIN

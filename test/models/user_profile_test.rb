@@ -14,7 +14,7 @@ class UserProfileTest < ActiveSupport::TestCase
 
     user_profile.user = nil
     assert_not user_profile.valid?
-    assert_includes user_profile.errors[:user], "must exist"
+    assert_includes user_profile.errors[:user], "User must exist"
   end
 
   test "Invalid if name is not set" do
@@ -24,7 +24,7 @@ class UserProfileTest < ActiveSupport::TestCase
 
     user_profile.name = nil
     assert_not user_profile.valid?
-    assert_includes user_profile.errors[:name], "can't be blank"
+    assert_includes user_profile.errors[:name], "Name can't be blank"
   end
 
   test "Invalid if lang is not set" do
@@ -34,8 +34,8 @@ class UserProfileTest < ActiveSupport::TestCase
 
     user_profile.lang = nil
     assert_not user_profile.valid?
-    assert_includes user_profile.errors[:lang], "can't be blank"
-    assert_includes user_profile.errors[:lang], "is not included in the list"
+    assert_includes user_profile.errors[:lang], "Language can't be blank"
+    assert_includes user_profile.errors[:lang], "Language is not included in the list"
   end
 
   test "Invalid if lang is set unknown locale" do
@@ -45,6 +45,6 @@ class UserProfileTest < ActiveSupport::TestCase
 
     user_profile.lang = :fr
     assert_not user_profile.valid?
-    assert_includes user_profile.errors[:lang], "is not included in the list"
+    assert_includes user_profile.errors[:lang], "Language is not included in the list"
   end
 end

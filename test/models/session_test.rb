@@ -4,8 +4,8 @@ class SessionTest < ActiveSupport::TestCase
   test "Unable to authenticate if both email and password are not set." do
     session = Session.new(email: nil, password: nil)
     assert_not session.valid?
-    assert_includes session.errors[:email], "can't be blank"
-    assert_includes session.errors[:password], "can't be blank"
+    assert_includes session.errors[:email], "Email can't be blank"
+    assert_includes session.errors[:password], "Password can't be blank"
     assert_includes session.errors[:base], "Sign in failed"
     assert_not session.authorized_user_credential
   end
@@ -13,7 +13,7 @@ class SessionTest < ActiveSupport::TestCase
   test "Unable to authenticate if password is not set" do
     session = Session.new(email: "one@example.com", password: nil)
     assert_not session.valid?
-    assert_includes session.errors[:password], "can't be blank"
+    assert_includes session.errors[:password], "Password can't be blank"
     assert_includes session.errors[:base], "Sign in failed"
     assert_not session.authorized_user_credential
   end
@@ -21,7 +21,7 @@ class SessionTest < ActiveSupport::TestCase
   test "Unable to authenticate if email is not set" do
     session = Session.new(email: nil, password: "P@ssW0rd")
     assert_not session.valid?
-    assert_includes session.errors[:email], "can't be blank"
+    assert_includes session.errors[:email], "Email can't be blank"
     assert_includes session.errors[:base], "Sign in failed"
     assert_not session.authorized_user_credential
   end

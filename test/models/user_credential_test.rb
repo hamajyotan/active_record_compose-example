@@ -4,7 +4,7 @@ class UserCredentialTest < ActiveSupport::TestCase
   test "user must be present" do
     user_credential = UserCredential.new(user: nil)
     assert_not user_credential.valid?
-    assert_includes user_credential.errors[:user], "must exist"
+    assert_includes user_credential.errors[:user], "User must exist"
   end
 
   test "password must be present" do
@@ -12,7 +12,7 @@ class UserCredentialTest < ActiveSupport::TestCase
     user_credential = user.build_user_credential
     user_credential.password = nil
     assert_not user_credential.valid?
-    assert_includes user_credential.errors[:password], "can't be blank"
+    assert_includes user_credential.errors[:password], "Password can't be blank"
   end
 
   test "password_confirmation must be same to password" do
@@ -21,7 +21,7 @@ class UserCredentialTest < ActiveSupport::TestCase
     user_credential.password = "foo"
     user_credential.password_confirmation = "bar"
     assert_not user_credential.valid?
-    assert_includes user_credential.errors[:password_confirmation], "doesn't match Password"
+    assert_includes user_credential.errors[:password_confirmation], "Password doesn't match"
   end
 
   test "email must be present" do
@@ -29,7 +29,7 @@ class UserCredentialTest < ActiveSupport::TestCase
     user_credential = user.build_user_credential
     user_credential.email = nil
     assert_not user_credential.valid?
-    assert_includes user_credential.errors[:email], "can't be blank"
+    assert_includes user_credential.errors[:email], "Email can't be blank"
   end
 
   test "email must be normalized to lowercase" do
@@ -44,7 +44,7 @@ class UserCredentialTest < ActiveSupport::TestCase
     user_credential = user.build_user_credential
     user_credential.email = "one@example.com"
     assert_not user_credential.valid?
-    assert_includes user_credential.errors[:email], "has already been taken"
+    assert_includes user_credential.errors[:email], "Email has already been taken"
   end
 
   test "The token must be automatically generated at the time of storage." do
