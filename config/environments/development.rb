@@ -14,6 +14,7 @@ Rails.application.configure do
 
     config.hosts << url.host
 
+    # TODO: Adjust when https://github.com/orgs/community/discussions/156532 is resolved.
     warn "Disabling the CSRF protection Origin header check in GitHub Codespaces"
     config.action_controller.forgery_protection_origin_check = false
   else
