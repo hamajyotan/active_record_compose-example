@@ -25,12 +25,18 @@ From the console, you can start the application as a normal Rails app using the 
 ![](doc/bin-rails-server.png)
 
 When launching, a dialog will appear asking whether to expose port 3000.
-At this point, the port is not accessible externally for security reasons. However, if you select `Make Public`, the port will be exposed and accessible.
+You do not need to select anything in particular, but if you select `Make Public`,  Users other than yourself who are logged in to GitHub will be able to access it.
 
 ![](doc/port-visibility-dialog.png)
 
-If you were unable to respond to the dialog, you can manually expose the port by following these steps:
-Go to `PORTS` > `Visibility`, open the menu where it is set to `Private`, and change `Port Visibility` to `Public`.
+You can still access it as `Private` by yourself, but right after you start, you can't access it yet due to a behavior that seems to be a bug in GitHub Codespaces. You need to do the following
+
+* Go to `PORTS` > `Visibility`, open the menu where it is set to `Private`, and change `Port Visibility` to `Public`.
+* In the same way, change it back from `Public` to `Private` this time.
+
+(This behavior is reported below, and this content will be sorted out as soon as it is resolved.)
+
+[Port forwarding does not work on first boot unless port visibility is toggled in GitHub Codespaces](https://github.com/orgs/community/discussions/156546)
 
 ![](doc/change-port-visibility-to-public.png)
 
@@ -38,11 +44,7 @@ You can now access the application from the `Forwarded Address` URL.
 
 ![](doc/forwarded-address.png)
 
-When opening the link in a new window for the first time, a warning message will appear. Click `Continue` to proceed.
-
-![](doc/port-visibility-warn.png)
-
-After clicking `Continue`, you should see the application running successfully.
+you should see the application running successfully.
 
 ![](doc/application-was-able-to-start.png)
 
