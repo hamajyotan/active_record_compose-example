@@ -22,7 +22,7 @@
 
   // TODO: Adjust when https://github.com/orgs/community/discussions/156546 is resolved.
   // HACK: Port forwarding does not work unless port visibility is manually changed at startup
-  "postStartCommand": "gh repo view --json nameWithOwner --jq .nameWithOwner | xargs -I{} bash -c 'gh codespace ports visibility 3000:public --repo {} && sleep 3 && gh codespace ports visibility 3000:private --repo {}'"
+  "postStartCommand": "gh repo view --json nameWithOwner --jq .nameWithOwner | xargs -I{} bash -c 'gh codespace ports visibility 3000:public --repo {} && sleep 3 && gh codespace ports visibility 3000:private --repo {}'",
 
   // Configure tool-specific properties.
   "customizations": {
