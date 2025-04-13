@@ -1,10 +1,9 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  codespaces_port_forwarding_domain = ENV["GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN"]
-  codespace_name = ENV["CODESPACE_NAME"]
-
-  if codespaces_port_forwarding_domain.present? && codespace_name.present?
+  if ENV["CODESPACES"] == "true"
+    codespaces_port_forwarding_domain = ENV["GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN"]
+    codespace_name = ENV["CODESPACE_NAME"]
     url = URI.parse("https://#{codespace_name}-3000.#{codespaces_port_forwarding_domain}")
 
     default_url_options = {
