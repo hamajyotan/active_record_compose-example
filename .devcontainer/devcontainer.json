@@ -59,6 +59,10 @@
   // Uncomment to connect as root instead. More info: https://containers.dev/implementors/json_reference/#remoteUser.
   // "remoteUser": "root",
 
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "bundle install",
+
+  "postAttachCommand": "bin/rails server",
 
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "bin/setup --skip-server"
