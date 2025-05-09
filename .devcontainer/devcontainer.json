@@ -17,20 +17,9 @@
     "SELENIUM_HOST": "selenium"
   },
 
-  // A known problem is that this port forwarding configuration is not working properly right after codespace is started.
-  // PORTS > Visibility, change the setting that is currently /set to Private to Public, and immediately change it back to Private.
-  // This behavior seems to be a bug and is reported below.
-  // https://github.com/orgs/community/discussions/156546
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000],
 
-  // NOTE:
-  // When the forwardPorts setting exists, port forwarding does not work properly immediately after startup.
-  // As a workaround, changing the public range from Private -> Public -> Private will work, but it will work if this setting does not exist.
-  // Note that this bug does not occur when using images from “mcr.microsoft.com/devcontainers/ruby” instead of
-  // “ghcr.io/rails/devcontainer/images/ruby”. method provided by rails itself.
-  //
-  // "forwardPorts": [3000],
-
-  // Even without the “forwardPorts” setting above, the ports can be controlled by the “portsAttributes” directly below, which is sufficient.
   "portsAttributes": {
     "3000": {
       "label": "Application",
@@ -62,7 +51,7 @@
   "waitFor": "onCreateCommand",
   "updateContentCommand": "bundle install",
 
-  "postAttachCommand": "bin/rails server",
+  "postAttachCommand": "bin/rails server -b 0.0.0.0",
 
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "bin/setup --skip-server"
