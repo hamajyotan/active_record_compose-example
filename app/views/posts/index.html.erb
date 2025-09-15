@@ -10,7 +10,7 @@
   <%= turbo_stream_from :posts %>
 
   <%= turbo_frame_tag :posts do %>
-    <%= render @posts %>
+    <%= render partial: "posts/post", collection: @posts, as: :post %>
   <% end %>
 
   <% if @posts.present? %>

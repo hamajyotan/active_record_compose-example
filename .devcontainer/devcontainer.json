@@ -50,8 +50,7 @@
     },
     "vscode": {
       "extensions": [
-        "Shopify.ruby-lsp",
-        "soutaro.steep-vscode"
+        "Shopify.ruby-lsp"
       ]
     }
   },
@@ -62,7 +61,7 @@
   "waitFor": "onCreateCommand",
   "updateContentCommand": "bundle install",
 
-  "postAttachCommand": "bin/rails server",
+  "postAttachCommand": "bin/dev",
 
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "bin/setup --skip-server"
