@@ -50,8 +50,7 @@
     },
     "vscode": {
       "extensions": [
-        "Shopify.ruby-lsp",
-        "soutaro.steep-vscode"
+        "Shopify.ruby-lsp"
       ]
     }
   },
