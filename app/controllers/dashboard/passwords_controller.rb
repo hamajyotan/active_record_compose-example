@@ -10,7 +10,7 @@ class Dashboard::PasswordsController < Dashboard::ApplicationController
       sign_in(current_user.user_credential)
       redirect_to dashboard_password_path, notice: t(".updated"), status: :see_other
     else
-      render :show, status: :unprocessable_entity
+      render :show, status: :unprocessable_content
     end
   end
 

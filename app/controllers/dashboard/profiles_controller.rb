@@ -9,7 +9,7 @@ class Dashboard::ProfilesController < Dashboard::ApplicationController
         redirect_to dashboard_profile_path, notice: t(".updated"), status: :see_other
       end
     else
-      render :show, status: :unprocessable_entity
+      render :show, status: :unprocessable_content
     end
   end
 

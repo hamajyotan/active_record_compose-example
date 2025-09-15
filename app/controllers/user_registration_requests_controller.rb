@@ -7,7 +7,7 @@ class UserRegistrationRequestsController < ApplicationController
     if @user_registration_request.update(user_registration_request_params)
       redirect_to root_path, notice: t(".created"), status: :see_other
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 

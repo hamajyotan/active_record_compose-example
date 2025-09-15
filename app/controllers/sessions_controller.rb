@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to root_path, notice: t(".created"), status: :see_other
     else
       sign_out
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 

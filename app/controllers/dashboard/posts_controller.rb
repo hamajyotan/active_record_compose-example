@@ -7,7 +7,7 @@ class Dashboard::PostsController < Dashboard::ApplicationController
     if @post.update(post_params)
       @post.broadcast_prepend_to :posts
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 

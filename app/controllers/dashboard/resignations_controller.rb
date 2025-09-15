@@ -8,7 +8,7 @@ class Dashboard::ResignationsController < Dashboard::ApplicationController
       sign_out
       redirect_to root_path, notice: t(".created"), status: :see_other
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 

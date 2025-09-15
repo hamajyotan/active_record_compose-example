@@ -9,7 +9,7 @@ class UserRegistrations::ConfirmationsController < UserRegistrations::Applicatio
       sign_in(@confirmation.registered_user_credential)
       redirect_to root_path, notice: t(".created"), status: :see_other
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 
