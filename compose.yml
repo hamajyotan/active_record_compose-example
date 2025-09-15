@@ -1,0 +1,7 @@
+name: "active_record_compose_example"
+
+services:
+  selenium:
+    image: selenium/standalone-chromium
+    restart: unless-stopped
+    ports: ["4444:4444"]
