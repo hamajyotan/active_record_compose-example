@@ -15,7 +15,7 @@ This issue will be resolved as part of the setup process (`bin/setup`), so you c
 
 ![](doc/migrations-are-pending.png)
 
-At the end of the setup, the `bin/rails server` command is run from the console to start the application as a regular Rails app.
+At the end of the setup, the `bin/dev` command is run from the console to start the application as a regular Rails app.
 
 ![](doc/bin-rails-server.png)
 
