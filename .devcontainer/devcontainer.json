@@ -12,11 +12,6 @@
     "ghcr.io/rails/devcontainer/features/sqlite3": {}
   },
 
-  "containerEnv": {
-    "CAPYBARA_SERVER_PORT": "45678",
-    "SELENIUM_HOST": "selenium"
-  },
-
   // A known problem is that this port forwarding configuration is not working properly right after codespace is started.
   // PORTS > Visibility, change the setting that is currently /set to Private to Public, and immediately change it back to Private.
   // This behavior seems to be a bug and is reported below.
