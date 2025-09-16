@@ -17,7 +17,7 @@ This issue will be resolved as part of the setup process (`bin/setup`), so you c
 
 At the end of the setup, the `bin/dev` command is run from the console to start the application as a regular Rails app.
 
-![](doc/bin-rails-server.png)
+![](doc/bin-dev.png)
 
 A browser will automatically open, allowing you to verify that the application is running properly.
 
