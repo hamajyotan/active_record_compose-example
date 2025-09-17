@@ -63,5 +63,6 @@ end
 
 gem "dartsass-rails"
 gem "bootstrap"
+gem "lucide-rails"
 
 gem "active_record_compose"
