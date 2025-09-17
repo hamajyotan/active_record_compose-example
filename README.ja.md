@@ -16,13 +16,13 @@
 
 # 起動方法
 
-一般的な Rails アプリケーションなので `bin/setup --skip-server` および `bin/rails s` で起動できます。
+一般的な Rails アプリケーションなので `bin/setup --skip-server` および `bin/dev` で起動できます。
 vscode devcontainer での起動も可能です。
 また、ローカル開発環境でなくとも GitHub Codespaces でも開発環境を動かすことができます。
 
 ## GitHub Codespaces で開く
 
-ActiveRecordCompose Example は Template repository であり、そのまま codespace で開発環境を開くことができます。  
+ActiveRecordCompose Example は Template repository であり、そのまま codespace で開発環境を開くことができます。
 https://github.com/hamajyotan/active_record_compose-example から `Use this template` > `Open in a codespace` により codespace をそのまま開くことができます。
 
 ![](doc/open-in-a-codespace.png)

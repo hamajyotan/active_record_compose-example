@@ -16,13 +16,13 @@ This is a simple micropost application.
 
 # How to Start
 
-Since this is a standard Rails application, you can start it with `bin/setup --skip-server` and `bin/rails s`.
+Since this is a standard Rails application, you can start it with `bin/setup --skip-server` and `bin/dev`.
 It can also be launched in a VS Code dev container.
 Additionally, you can run the development environment on GitHub Codespaces, not just on your local machine.
 
 ## Open in a GitHub Codespaces
 
-ActiveRecordCompose Example is a template repository, allowing you to open a development environment in Codespaces as is.  
+ActiveRecordCompose Example is a template repository, allowing you to open a development environment in Codespaces as is.
 You can open a Codespace directly by navigating to https://github.com/hamajyotan/active_record_compose-example and selecting `Use this template` > `Open in a codespace`.
 
 ![](doc/open-in-a-codespace.png)
