@@ -24,6 +24,6 @@ module ApplicationHelper
   end
 
   def bi_icon(key)
-    lucide_icon key
+    tag.i class: [ "bi", "bi-#{key}" ]
   end
 end

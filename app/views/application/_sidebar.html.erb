@@ -4,28 +4,28 @@
   <%= navigation_link_item root_path, title: t(".home"), icon: "house", active: sidebar == "home" %>
 
   <% if logged_in? %>
-    <%= navigation_link_item dashboard_profile_path, title: t(".profile"), icon: "user", active: sidebar == "profile" %>
+    <%= navigation_link_item dashboard_profile_path, title: t(".profile"), icon: "person", active: sidebar == "profile" %>
     <%= navigation_link_item dashboard_password_path, title: t(".password"), icon: "key", active: sidebar == "password" %>
-    <%= navigation_link_item new_dashboard_resignation_path, title: t(".resignation"), icon: "circle-arrow-out-up-left", active: sidebar == "resignation" %>
-    <%= navigation_link_item session_path, title: t(".sign_out"), icon: "log-out", data: { turbo_method: :delete } %>
+    <%= navigation_link_item new_dashboard_resignation_path, title: t(".resignation"), icon: "escape", active: sidebar == "resignation" %>
+    <%= navigation_link_item session_path, title: t(".sign_out"), icon: "box-arrow-right", data: { turbo_method: :delete } %>
   <% else %>
-    <%= navigation_link_item new_session_path, title: t(".login"), icon: "log-in", active: sidebar == "login" %>
+    <%= navigation_link_item new_session_path, title: t(".login"), icon: "box-arrow-in-right", active: sidebar == "login" %>
     <%= navigation_link_item new_user_registration_request_path, title: t(".sign_up"), icon: "check", active: sidebar == "signup" %>
     <%= navigation_delimiter %>
-    <%= navigation_link_item locale_path(lang: 'en'), title: t("lang.en"), icon: "languages", data: { turbo_method: :patch } %>
-    <%= navigation_link_item locale_path(lang: 'ja'), title: t("lang.ja"), icon: "languages", data: { turbo_method: :patch } %>
+    <%= navigation_link_item locale_path(lang: 'en'), title: t("lang.en"), icon: "translate", data: { turbo_method: :patch } %>
+    <%= navigation_link_item locale_path(lang: 'ja'), title: t("lang.ja"), icon: "translate", data: { turbo_method: :patch } %>
   <% end %>
 
   <% if Rails.env.development? %>
     <%= navigation_delimiter %>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-        <%= with_bi_icon "DevTools", key: "wrench" %>
+        <%= with_bi_icon "DevTools", key: "tools" %>
       </a>
       <ul class="dropdown-menu">
         <li>
           <%= link_to letter_opener_web_path, class: %w[dropdown-item], target: "_blank" do %>
-            <%= with_bi_icon "Letter Opener", key: "mail" %>
+            <%= with_bi_icon "Letter Opener", key: "envelope" %>
           <% end %>
         </li>
       </ul>
