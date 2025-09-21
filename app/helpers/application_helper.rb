@@ -9,21 +9,21 @@ module ApplicationHelper
         options[:class] = Array.wrap(options[:class]) << %w[nav-link]
       end
 
-      link_to(path, **options) { with_bi_icon(tag.span(title, class: "ml-3"), key: icon) }
+      link_to(path, **options) { with_icon(tag.span(title, class: "ml-3"), key: icon) }
     end
   end
 
   def navigation_delimiter = tag.li(class: %w[nav-item disabled]) { tag.hr }
 
-  def with_bi_icon(name = nil, key:, &block)
+  def with_icon(name = nil, key:, &block)
     if block_given?
-      safe_join [ bi_icon(key), yield ], " "
+      safe_join [ icon(key), yield ], " "
     else
-      safe_join [ bi_icon(key), name ], " "
+      safe_join [ icon(key), name ], " "
     end
   end
 
-  def bi_icon(key)
+  def icon(key)
     lucide_icon key
   end
 end
