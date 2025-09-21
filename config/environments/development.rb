@@ -23,7 +23,7 @@ Rails.application.configure do
     warn "Disabling the CSRF protection Origin header check in GitHub Codespaces"
     config.action_controller.forgery_protection_origin_check = false
   else
-    default_url_options = { host: "localhost", port: 3000 }
+    default_url_options = { host: "localhost", port: ENV.fetch("PORT", 3000) }
   end
 
   config.action_controller.default_url_options = default_url_options
