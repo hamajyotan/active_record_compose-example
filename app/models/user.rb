@@ -1,3 +1,14 @@
+# This model represents a user in its simplest form.
+# It does not have any specific attributes.
+
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer          not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 class User < ApplicationRecord
   has_one :user_credential
   has_one :user_profile
