@@ -1,1 +1,99 @@
 @import "tailwindcss";
+
+a {
+  @apply text-blue-600 hover:text-blue-800 underline;
+}
+
+hr {
+  @apply my-4 opacity-25;
+}
+
+.header {
+  @apply font-normal flex flex-wrap justify-center py-4 mb-6 border-b border-gray-300;
+}
+a.link-body-emphasis {
+  @apply no-underline text-black hover:opacity-75;
+}
+
+.form-label {
+  @apply mb-2 inline-block;
+}
+.form-control {
+  @apply block w-full px-3 py-2 text-base border rounded-md focus:outline-none focus:ring-2;
+  @apply border-gray-300 focus:ring-indigo-500 focus:border-indigo-500;
+}
+.form-control.is-invalid {
+  @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+}
+.form-select {
+  @apply block w-full px-3 py-2 text-base border rounded-md shadow-sm focus:outline-none sm:text-sm;
+  @apply border-gray-300 focus:ring-indigo-500 focus:border-indigo-500;
+}
+.form-select.is-invalid {
+  @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+}
+
+.form-floating {
+  @apply relative;
+}
+.form-floating .form-control {
+  @apply px-3 pt-6 pb-2;
+}
+.form-floating .form-label {
+  @apply absolute text-sm duration-300 transform -translate-y-4 scale-75 top-4 origin-[0] start-3;
+  @apply peer-focus:text-indigo-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto;
+  @apply text-gray-500;
+}
+
+.model-base-error {
+  @apply bg-yellow-100 border-yellow-500 text-yellow-700 p-4 mb-4 list-none;
+  @apply flex items-center p-4 mb-4 text-sm border rounded-lg;
+}
+
+.invalid-feedback {
+  @apply text-red-600 text-sm mt-1;
+}
+
+.btn.btn-primary {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.alert {
+  @apply flex items-center p-4 mb-4 text-sm border rounded-lg;
+}
+.alert-dismiss {
+  @apply ms-auto -mx-1.5 -my-1.5 rounded-lg focus:ring-2 p-1.5 inline-flex items-center justify-center h-8 w-8;
+}
+.flash-notice {
+  @apply text-blue-800 border-blue-300 bg-blue-50 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-800;
+}
+.flash-notice .alert-dismiss {
+  @apply bg-blue-50 text-blue-500 focus:ring-blue-400 hover:bg-blue-200 dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700;
+}
+.flash-alert {
+  @apply text-yellow-800 border-yellow-300 bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300 dark:border-yellow-800;
+}
+.flash-alert .alert-dismiss {
+  @apply bg-yellow-50 text-yellow-500 focus:ring-yellow-400 hover:bg-yellow-200 dark:bg-gray-800 dark:text-yellow-400 dark:hover:bg-gray-700;
+}
+
+.card {
+  @apply my-3 bg-white rounded-lg shadow border border-gray-200;
+}
+.card-body {
+  @apply p-4;
+}
+.card-footer {
+  @apply p-4 border border-gray-200 text-sm pt-2 flex gap-4 bg-gray-100 text-gray-500;
+}
+
+.nav {
+  @apply flex flex-col;
+}
+.nav-link {
+  @apply flex items-center p-2 rounded-lg;
+  @apply text-gray-900 hover:bg-gray-100;
+}
+.nav-link.active {
+  @apply text-gray-700 bg-blue-200;
+}

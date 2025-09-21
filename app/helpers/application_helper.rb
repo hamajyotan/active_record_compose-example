@@ -9,7 +9,7 @@ module ApplicationHelper
         options[:class] = Array.wrap(options[:class]) << %w[nav-link]
       end
 
-      link_to(path, **options) { with_bi_icon(title, key: icon) }
+      link_to(path, **options) { with_bi_icon(tag.span(title, class: "ml-3"), key: icon) }
     end
   end
 

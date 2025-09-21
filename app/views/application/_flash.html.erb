@@ -1,12 +1,20 @@
 <% if alert.present? %>
-  <div class="flash-alert alert alert-warning alert-dismissible fade show" role="alert">
-    <%= alert %>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <div data-controller="dismissible" class="alert flash-alert" role="alert">
+    <div class="text-sm font-medium">
+      <%= alert %>
+    </div>
+    <button type="button" class="alert-dismiss" data-action="dismissible#dismiss" aria-label="Close">
+      <%= lucide_icon "x" %>
+    </button>
   </div>
 <% end %>
 <% if notice.present? %>
-  <div class="flash-notice alert alert-info alert-dismissible fade show" role="alert">
-    <%= notice %>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <div data-controller="dismissible" class="alert flash-notice" role="alert">
+    <div class="text-sm font-medium">
+      <%= notice %>
+    </div>
+    <button type="button" class="alert-dismiss" data-action="dismissible#dismiss" aria-label="Close">
+      <%= lucide_icon "x" %>
+    </button>
   </div>
 <% end %>

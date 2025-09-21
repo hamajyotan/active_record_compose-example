@@ -1,6 +1,6 @@
-<%= tag.div class: %w[card my-2], data: { post_id: post.id } do %>
+<%= tag.div class: %w[card], data: { post_id: post.id } do %>
   <%= tag.div post.content, class: %w[card-body] %>
-  <%= tag.div class: %w[card-footer text-body-secondary] do %>
+  <%= tag.div class: %w[card-footer] do %>
     <%= tag.small h(post.created_at) %>
     <%= tag.small post.user.name %>
   <% end %>
