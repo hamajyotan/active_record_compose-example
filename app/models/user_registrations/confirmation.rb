@@ -1,3 +1,44 @@
+# This resource is handled by the controller responsible for user registration.
+# Within the context of user registration,
+# it performs a series of actions such as registering user profiles and credentials,
+# and establishing the relationship between the UserRegistration and User models.
+#
+# Although it involves updating data across several ActiveRecord models,
+# from the controller's perspective, it is considered a single operation on a unified resource.
+#
+# +==================================================+
+# |                                                  |
+# | UserRegistrations::Confirmation                  |
+# |                                                  |
+# | +---------------------+                          |
+# | | UserRegistration    |                          |
+# | +---------------------+                          |
+# | +---------------------+                          |
+# | | User                |                          |
+# | +---------------------+                          |
+# | +---------------------+                          |
+# | | UserCredential      |                          |
+# | |                 --------                   --------
+# | |                 password ----------------- password
+# | |                 --------                   --------
+# | |                     |                          |
+# | |           ---------------------      ---------------------
+# | |           password_confirmation ---- password_confirmation
+# | |           ---------------------      ---------------------
+# | +---------------------+                          |
+# | +---------------------+                          |
+# | | UserProfile         |                          |
+# | |                  ------                     ------
+# | |                   name  -------------------  name
+# | |                  ------                     ------
+# | |                     |                          |
+# | |                  ------                     ------
+# | |                   lang  -------------------  lang
+# | |                  ------                     ------
+# | +---------------------+                          |
+# |                                                  |
+# +==================================================+
+#
 class UserRegistrations::Confirmation < ActiveRecordCompose::Model
   def initialize(user_registration)
     @user_registration = user_registration
@@ -15,6 +56,10 @@ class UserRegistrations::Confirmation < ActiveRecordCompose::Model
   delegate_attribute :password, :password_confirmation, to: :user_credential
   delegate_attribute :name, :lang, to: :user_profile
 
+  # If user registration is successful,
+  # the controller will automatically log the user in immediately afterward.
+  # This reader is used to provide the necessary credentials to the controller for this process.
+  #
   attr_reader :registered_user_credential
 
   private
