@@ -3,19 +3,19 @@
 # any necessary validation logic or post-registration email notification callbacks are not
 # directly implemented in the AR model, but are instead handled within this specific context.
 #
-# +==================================+
-# |                                  |
-# | UserRegistrationRequest          |
-# |                                  |
-# | +---------------------+          |
-# | |                     |          |
-# | |                   -----      -----
-# | | UserRegistration  email ---- email
-# | |                   -----      -----
-# | |                     |          |
-# | +---------------------+          |
-# |                                  |
-# +==================================+
+# +====================================+
+# |                                    |
+# | UserRegistrationRequest            |
+# |                                    |
+# | +=====================+            |
+# | |                     |            |
+# | | UserRegistration -------      -------
+# | |                   email  <-->  email
+# | |                  -------      -------
+# | |                     |            |
+# | +=====================+            |
+# |                                    |
+# +====================================+
 #
 class UserRegistrationRequest < ActiveRecordCompose::Model
   def initialize

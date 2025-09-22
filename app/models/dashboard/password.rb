@@ -1,24 +1,24 @@
 # This is a model that is used by the controller responsible for password changes.
 # It includes a before_validation hook specifically designed for this context.
 #
-# +==============================================+
-# |                                              |
-# | Dashboard::Password                          |
-# |                                              |
-# | +-------------------+                        |
-# | |                   |                        |
-# | | UserCredential    |                        |
-# | |               --------                 --------
-# | |               password --------------- password
-# | |               --------                 --------
-# | |                   |                        |
-# | |         ---------------------      ---------------------
-# | |         password_confirmation ---- password_confirmation
-# | |         ---------------------      ---------------------
-# | |                   |                        |
-# | +-------------------+                        |
-# |                                              |
-# +==============================================+
+# +================================================+
+# |                                                |
+# | Dashboard::Password                            |
+# |                                                |
+# | +===================+                          |
+# | |                   |                          |
+# | | UserCredential    |                          |
+# | |               ----------                ----------
+# | |                password  <------------>  password
+# | |               ----------                ----------
+# | |                   |                          |
+# | |        -----------------------      -----------------------
+# | |         password_confirmation  <-->  password_confirmation
+# | |        -----------------------      -----------------------
+# | |                   |                          |
+# | +===================+                          |
+# |                                                |
+# +================================================+
 #
 class Dashboard::Password < ActiveRecordCompose::Model
   def initialize(user)

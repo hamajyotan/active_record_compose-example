@@ -6,26 +6,26 @@
 # Deleting the UserProfile will mark the user as "Resigned" for any existing posts.
 # Deleting the UserCredential will invalidate all sessions associated with that user.
 #
-# +================================================+
-# |                                                |
-# | UserRegistrations::Resignation              ------
-# |                                             accept
-# |                                             ------
-# |                                                |
-# | +--------------------------+                   |
-# | | UserResignation          |                   |
-# | |                       ------              ------
-# | |                       reason ------------ reason
-# | |                       ------              ------
-# | +--------------------------+                   |
-# | +--------------------------+                   |
-# | | UserProfile (destroy)    |                   |
-# | +--------------------------+                   |
-# | +--------------------------+                   |
-# | | UserCredential (destroy) |                   |
-# | +--------------------------+                   |
-# |                                                |
-# +================================================+
+# +=================================================+
+# |                                                 |
+# | UserRegistrations::Resignation               --------
+# |                                               accept
+# |                                              --------
+# |                                                 |
+# | +==========================+                    |
+# | | UserResignation          |                    |
+# | |                      --------              --------
+# | |                       reason  <---------->  reason
+# | |                      --------              --------
+# | +==========================+                    |
+# | +==========================+                    |
+# | | UserProfile (destroy)    |                    |
+# | +==========================+                    |
+# | +==========================+                    |
+# | | UserCredential (destroy) |                    |
+# | +==========================+                    |
+# |                                                 |
+# +=================================================+
 #
 class Dashboard::Resignation < ActiveRecordCompose::Model
   def initialize(user)
