@@ -102,6 +102,8 @@ resignation.save          # => true
                           # COMMIT
 ```
 
+For more details, please refer to the code for each model.
+
 ## E-R Diagram
 
 ```mermaid
