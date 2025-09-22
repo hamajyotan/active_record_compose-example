@@ -5,7 +5,7 @@ class Dashboard::ProfilesController < Dashboard::ApplicationController
 
   def update
     if @dashboard_profile.update(dashboard_profile_params)
-      I18n.with_locale(current_user.lang) do
+      I18n.with_locale(@dashboard_profile.lang) do
         redirect_to dashboard_profile_path, notice: t(".updated"), status: :see_other
       end
     else

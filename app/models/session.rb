@@ -1,3 +1,22 @@
+# ActiveRecord_Compose allows a single model to contain 0 to N other models.
+# This works even if there are zero contained models; in that case,
+# it behaves essentially like a regular ActiveRecord model.
+#
+# Here, we are identifying a resource (noun) called "Session" from the login process.
+# Successful saving indicates successful authentication.
+#
+# +=================+
+# |                 |
+# |              --------
+# |               email
+# |              --------
+# | Session         |
+# |              --------
+# |              password
+# |              --------
+# |                 |
+# +=================+
+#
 class Session < ActiveRecordCompose::Model
   attribute :email, :string
   attribute :password, :string
