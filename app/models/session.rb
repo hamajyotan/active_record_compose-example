@@ -36,7 +36,7 @@ class Session < ActiveRecordCompose::Model
   end
 
   def authenticate
-    @authorized_user_credential = email.present? && password.present? && UserCredential.find_by(email:)&.authenticate(password).presence
+    @authorized_user_credential = UserCredential.authenticate_by(email:, password:)
   end
 
   def require_authenticated
