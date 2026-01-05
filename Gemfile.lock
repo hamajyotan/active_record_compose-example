@@ -161,8 +161,7 @@ GEM
     matrix (0.4.2)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (6.0.0)
-      prism (~> 1.5)
+    minitest (5.27.0)
     msgpack (1.8.0)
     net-imap (0.5.12)
       date
@@ -395,6 +394,7 @@ DEPENDENCIES
   importmap-rails
   letter_opener_web
   lucide-rails
+  minitest (< 6)
   propshaft
   puma (>= 5.0)
   rails (~> 8.1.1)
