@@ -47,7 +47,7 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    active_record_compose (1.1.1)
+    active_record_compose (1.2.0)
       activerecord (>= 7.1, < 8.2)
     activejob (8.1.1)
       activesupport (= 8.1.1)
