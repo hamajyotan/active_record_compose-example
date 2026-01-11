@@ -59,7 +59,6 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
-  gem "minitest", "< 6" # TODO: Avoiding running all tests
   gem "selenium-webdriver"
 end
 
