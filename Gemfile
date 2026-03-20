@@ -18,7 +18,6 @@ gem "active_record_compose"
 gem "bcrypt", "> 3.1.7"
 gem "bootsnap", require: false
 gem "solid_cable"
-gem "solid_cache"
 gem "solid_queue"
 gem "thruster", require: false
 gem "tzinfo-data", platforms: %i[ windows jruby ]
