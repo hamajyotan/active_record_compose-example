@@ -10,50 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_10_091505) do
+ActiveRecord::Schema[8.1].define(version: 2025_03_10_091505) do
   create_table "posts", force: :cascade do |t|
-    t.integer "user_id", null: false
     t.text "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "user_credentials", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
     t.string "token", null: false
-    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
     t.index ["user_id"], name: "index_user_credentials_on_user_id", unique: true
   end
 
   create_table "user_profiles", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.string "name", null: false
-    t.string "lang", null: false
     t.datetime "created_at", null: false
+    t.string "lang", null: false
+    t.string "name", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
     t.index ["user_id"], name: "index_user_profiles_on_user_id", unique: true
   end
 
   create_table "user_registrations", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "email", null: false
-    t.string "token", null: false
-    t.datetime "expires_at", null: false
     t.datetime "created_at", null: false
+    t.string "email", null: false
+    t.datetime "expires_at", null: false
+    t.string "token", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["token"], name: "index_user_registrations_on_token", unique: true
     t.index ["user_id"], name: "index_user_registrations_on_user_id", unique: true
   end
 
   create_table "user_resignations", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.text "reason"
     t.datetime "created_at", null: false
+    t.text "reason"
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
     t.index ["user_id"], name: "index_user_resignations_on_user_id", unique: true
   end
 
