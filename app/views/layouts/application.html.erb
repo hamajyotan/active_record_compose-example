@@ -24,14 +24,14 @@
   </head>
 
   <body>
-    <div class="container mx-auto px-4">
+    <div class="container">
       <%= render 'header' %>
-      <div class="flex flex-wrap">
-        <div class="w-full md:w-9/12 p-4">
+      <div class="row">
+        <div class="col-md-9 p-3">
           <%= render 'flash' %>
           <%= yield %>
         </div>
-        <div class="w-full md:w-3/12 p-4">
+        <div class="col-md-3 p-3">
           <%= render 'sidebar' %>
         </div>
       </div>

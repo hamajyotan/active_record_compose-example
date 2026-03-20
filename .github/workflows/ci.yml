@@ -83,6 +83,24 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version-file: .node-version
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        id: node-modules-cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install npm package
+        if: steps.node-modules-cache.outputs.cache-hit != 'true'
+        run: npm install --frozen-lockfile
+
       - name: Run tests
         env:
           RAILS_ENV: test
@@ -107,6 +125,24 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version-file: .node-version
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        id: node-modules-cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install npm package
+        if: steps.node-modules-cache.outputs.cache-hit != 'true'
+        run: npm install --frozen-lockfile
 
       - name: Run System Tests
         env:
