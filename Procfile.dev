@@ -1,1 +1,0 @@
-web: env RUBY_DEBUG_OPEN=true env SOLID_QUEUE_IN_PUMA=true bin/rails server
