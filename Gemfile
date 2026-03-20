@@ -19,7 +19,6 @@ gem "bcrypt", "> 3.1.7"
 gem "bootsnap", require: false
 gem "solid_cable"
 gem "solid_queue"
-gem "thruster", require: false
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 group :development, :test do
